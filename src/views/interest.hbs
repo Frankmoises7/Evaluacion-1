@@ -1,0 +1,33 @@
+<section class="container py-4">
+
+  <div class="title">
+    <h1>Calculadora de Interes</h1>
+  </div>
+
+  <form action="/" method="post" class="form1">
+    <div class="mb-3">
+      <label for="capital" class="col-form-label"> Capital: </label>
+      <input type="number" class="form-control" name="capital" value="{{capital}}" placeholder="Cantidad de dinero">
+    </div>
+    <div class="mb-3">
+      <label for="interest" class="col-form-label"> Interes %: </label>
+      <input type="number" class="form-control" name="interest" value="{{interest}}" placeholder="Porcentaje">
+    </div>
+    <div class="mb-3">
+      <label for="years" class="col-form-label"> Años: </label>
+      <input type="number" class="form-control" name="years" value="{{years}}" placeholder="Cantidad de años">
+    </div>
+    <br>
+    <div class="button">
+      <button type="submit" class="btn btn-secondary"> Calcular Interes </button>
+    </div>
+  </form>
+  
+  {{#if total}}
+  <div class="total">
+    <p><span class="fw-bold"> Ganancia: </span> $ {{gain}}</p>
+    <span class="fw-bold">El capital total despues de {{years}} años será de $ {{total}}</span> </p>
+  </div>
+  {{/if}}
+</section>
+
